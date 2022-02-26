@@ -31,10 +31,20 @@ a:hover {
     text-transform: uppercase;
 }
 
+.hero-image-m, .creation-img-m{
+    visibility: hidden;
+}
+
+
+
 
 
 .attribution { font-size: 11px; text-align: center; margin: 20px auto 0}
 .attribution a { color:#fff; }
+
+
+
+
 
 @media (min-width: 320px) and (max-width: 480px) {
     
@@ -65,7 +75,8 @@ a:hover {
         position: relative;
     }
 
-    .hero-image{
+    .hero-image-m{
+        visibility: visible;
         z-index: -1;
         position: absolute;
         height: 100%;
@@ -160,8 +171,6 @@ a:hover {
     /* Creation section  */
 
     .creation-box {
-        /* background: rgb(0,0,0);
-        background: linear-gradient(135deg, rgba(0,0,0,0.7486344879748774) 2%, rgba(9,9,121,0) 100%, rgba(0,212,255,1) 100%); */
         text-align: left;
         position: relative;
         height: 150px;
@@ -170,6 +179,7 @@ a:hover {
     }
     .creation-img-m {
         visibility: visible;
+        display: none;
     }
 
     .grid-text {
