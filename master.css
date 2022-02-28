@@ -3,6 +3,15 @@
     padding: 0;
 }
 
+body {
+    background-color: #f6f6f6;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    margin: 100px 0;
+}
+
 .btn:focus {
     border: none;
     outline: none;
@@ -30,9 +39,38 @@ a:hover {
 .uppercase{
     text-transform: uppercase;
 }
+.img-d {
+    visibility: visible;
+}
 
-.hero-image-m, .creation-img-m{
+.img-m, .toggle-btn {
     visibility: hidden;
+}
+
+#hero-banner {
+    color: #fff;
+    height: auto;
+    position: relative;
+}
+
+.hero-image{
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#nav-bar .container-fluid{
+    /* display: flex; */
+    /* flex-direction: row; */
+    justify-content: space-between;
+}
+
+.navbar-logo{
+    display: inline-block;
+    margin-top: 20px;
+    height: auto;
+    z-index: 1000;
 }
 
 
@@ -65,23 +103,18 @@ a:hover {
         height: auto;
     }
 
-    .container {
-        margin: 100px 0;
-    }
+  
 
-    #hero-banner {
-        color: #fff;
-        height: auto;
-        position: relative;
-    }
-
-    .hero-image-m{
+    .img-m {
         visibility: visible;
-        z-index: -1;
-        position: absolute;
-        height: 100%;
-        width: 100%;
     }
+
+    .img-d {
+        visibility: hidden;
+        display: none;
+    }
+
+  
 
     #nav-bar {
         padding: 5% 0;
@@ -94,6 +127,7 @@ a:hover {
     }
 
     .toggle-btn {
+        visibility: visible;
         color: #fff;
         font-size: 2rem;
         z-index: 1000;
@@ -101,12 +135,6 @@ a:hover {
 
     .toggle-btn:hover, .toggle-btn:focus {
         color: #fff;
-    }
-
-    .navbar-logo{
-        margin-top: 20px;
-        height: auto;
-        z-index: 1000;
     }
 
 
@@ -141,10 +169,14 @@ a:hover {
     .navlink {
         font-size: 35px;
         margin-bottom: 20px;
-        color: #fff;
+        color: #a2a2a2;
         margin: 20px 10px;
         font-family: 'Josefin Sans', sans-serif;
         text-transform: uppercase;
+    }
+
+    .navlink:hover {
+        color: #fff;
     }
 
     #hero-container {
@@ -177,11 +209,7 @@ a:hover {
         margin: 20px 0;
         width: 100%;
     }
-    .creation-img-m {
-        visibility: visible;
-        display: none;
-    }
-
+  
     .grid-text {
         position: absolute;
         width: 150px;
