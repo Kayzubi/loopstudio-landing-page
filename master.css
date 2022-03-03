@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    margin: 100px 0;
+    margin: 100px auto;
 }
 
 .btn:focus {
@@ -39,46 +39,93 @@ a:hover {
 .uppercase{
     text-transform: uppercase;
 }
-.img-d {
-    visibility: visible;
-}
-
-.img-m, .toggle-btn {
-    visibility: hidden;
-}
-
-#hero-banner {
-    color: #fff;
-    height: auto;
-    position: relative;
-}
-
-.hero-image{
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-#nav-bar .container-fluid{
-    /* display: flex; */
-    /* flex-direction: row; */
-    justify-content: space-between;
-}
-
-.navbar-logo{
-    display: inline-block;
-    margin-top: 20px;
-    height: auto;
-    z-index: 1000;
-}
-
-
-
-
 
 .attribution { font-size: 11px; text-align: center; margin: 20px auto 0}
 .attribution a { color:#fff; }
+
+@media  (min-device-width: 800px) and (max-device-width: 1600px) { 
+
+    .img-d {
+        visibility: visible;
+    }
+    
+    .img-m, .toggle-btn {
+        visibility: hidden;
+    }
+    
+    #hero-banner {
+        color: #fff;
+        height: auto;
+        position: relative;
+    }
+    
+    .hero-image{
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    
+    #nav-bar .container-fluid{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end;
+    }
+    
+    .navbar-logo{
+        display: inline-block;
+        margin-top: 20px;
+        height: auto;
+        z-index: 1000;
+    }
+    
+    .nav-links {
+        position: absolute;
+        right: 50px;
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        padding: 25px 5px 5px;
+        justify-content: space-between;
+        margin: auto;
+        text-align: center;
+    }
+
+    .navlink {
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .navlink::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        background-color: #fff;
+        height: 2px;
+        transition: 0.4s ease-out all .1s;
+
+    }
+
+    .navlink:hover::after {
+        width: 90%;
+        left: 5%;
+        transition: 0.5s ease all;
+    }
+
+
+
+
+
+
+
+
+}
+
 
 
 
@@ -118,10 +165,11 @@ a:hover {
 
     #nav-bar {
         padding: 5% 0;
+        position: relative;
     }
 
     .visible-mobile {
-        position: relative;
+        /* position: relative; */
         display: flex;
         justify-content: space-between;
     }
@@ -131,6 +179,8 @@ a:hover {
         color: #fff;
         font-size: 2rem;
         z-index: 1000;
+        position: absolute;
+        right: 10px;
     }
 
     .toggle-btn:hover, .toggle-btn:focus {
@@ -165,6 +215,10 @@ a:hover {
       .overflow {
           overflow: hidden;
       }
+
+    .nav-links {
+        display: block;
+    }
 
     .navlink {
         font-size: 35px;
